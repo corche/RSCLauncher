@@ -1,23 +1,23 @@
 # Custom Language File for Launcher Customizer
 
 [ejs.app]
-title = "MRS Launcher"
+title = "RSC Launcher"
 
 [ejs.landing]
-mediaHomeURL = "https://mysticred.space"
+mediaHomeURL = "#"
 mediaLinkURL = "#"
-mediaMapURL = "https://map.mysticred.space"
-mediaGitHubURL = "https://github.com/peunsu/MRSLauncher"
+mediaMapURL = "#"
+mediaGitHubURL = "https://github.com/corche/RSCLauncher"
 mediaXURL = "#"
-mediaInstagramURL = "#"
-mediaYouTubeURL = "#"
-mediaDiscordURL = "https://discord.gg/Z8j6ahF4MJ"
+mediaInstagramURL = "instagram.com/haaaaaaanrz"
+mediaYouTubeURL = "https://www.youtube.com/@%EB%A3%AC%EC%AD%88"
+mediaDiscordURL = "https://discord.gg/runzhu"
 
 [ejs.settings]
-sourceGithubLink = "https://github.com/peunsu/MRSLauncher"
-supportLink = "https://github.com/peunsu/MRSLauncher/issues"
+sourceGithubLink = "https://github.com/corche/RSCLauncher"
+supportLink = "https://github.com/corche/RSCLauncher/issues"
 
 [ejs.welcome]
-welcomeHeader = "Mystic Red Space"
-welcomeDescription = "2017년, 작은 모드팩 서버로 시작한 Mystic Red Space는 오랜 시간동안 모드팩 유저의 사랑을 받으면서 현재까지 수십 개 이상의 모드팩 서버를 제공하였습니다.  이제 MRS는 단순한 마인크래프트 모드팩 서버를 넘어서, 더 많은 사람들이 마인크래프트 모드 정보를 쉽게 접하고 모드팩에 대한 관심을 키울 수 있는 모드 커뮤니티로 한 걸음 나아가고 있습니다."
-welcomeDescCTA = "모드팩을 사랑하는 당신을 위한 최고의 선물이 되겠습니다."
+welcomeHeader = "룬스코드 젠슨황 마크서버"
+welcomeDescription = "마인크래프트 립버전 1.20.1다운 마인크래프트 립버전 1.20.1다운 있을 것 같았다. 그건 실로 벅찬 감격이었다.고마워요 스티브. 덕분에 마음이 아주 편해졌어요.고마워할 필요는 없어.알렉스는 미소지으며 손을 내밀었다. 스티브는 기쁜 얼굴로 악수를 리를 질렀다. 이건....정말 상황 파악이 느린 녀석이로군.네가 지금 어디에 마인크래프트 립버전 1.20.1다운 알기나 하는 거야 어리광을 받아주는 것도 여기까지다. 어서 이름이나 말해 어디서 감히 마인크래프트 립버전 1.20.1다"
+welcomeDescCTA = "계속하기를 눌러 마인크래프트 립버전 1.20.1 시작하기"

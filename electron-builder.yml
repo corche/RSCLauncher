@@ -1,51 +1,50 @@
-appId: 'mrslauncher'
-productName: 'MRS Launcher'
-artifactName: 'MRS-Launcher-setup-${version}.${ext}'
+appId: "rsclauncher"
+productName: "RSC Launcher"
+artifactName: "RSC-Launcher-setup-${version}.${ext}"
 
-copyright: 'Copyright © 2018-2026 Daniel Scalzi, Copyright © 2024 peunsu'
+copyright: "Copyright © 2018-2026 Daniel Scalzi, Copyright © 2024 peunsu"
 
 asar: true
-compression: 'maximum'
+compression: "maximum"
 
 files:
-  - '!{dist,.gitignore,.vscode,docs,dev-app-update.yml,.nvmrc,eslint.config.mjs}'
+    - "!{dist,.gitignore,.vscode,docs,dev-app-update.yml,.nvmrc,eslint.config.mjs}"
 
 extraResources:
-  - 'libraries'
+    - "libraries"
 
 # Windows Configuration
-win: 
-  target: 
-    - target: 'nsis'
-      arch: 'x64'
+win:
+    target:
+        - target: "nsis"
+          arch: "x64"
 
 # Windows Installer Configuration
 nsis:
-  oneClick: false
-  perMachine: false
-  allowElevation: true
-  allowToChangeInstallationDirectory: true
+    oneClick: false
+    perMachine: false
+    allowElevation: true
+    allowToChangeInstallationDirectory: true
 
 # macOS Configuration
 mac:
-  target:
-    - target: 'dmg'
-      arch:
-        - 'x64'
-        - 'arm64'
-  artifactName: 'MRS-Launcher-setup-${version}-${arch}.${ext}'
-  category: 'public.app-category.games'
+    target:
+        - target: "dmg"
+          arch:
+              - "x64"
+              - "arm64"
+    artifactName: "RSC-Launcher-setup-${version}-${arch}.${ext}"
+    category: "public.app-category.games"
 
 # Linux Configuration
-linux: 
-  target: 'AppImage'
-  maintainer: 'Daniel Scalzi, peunsu'
-  vendor: 'Daniel Scalzi, peunsu'
-  synopsis: 'Modded Minecraft Launcher'
-  description: 'Custom launcher which allows users to join modded servers. All mods, configurations, and updates are handled automatically.'
-  category: 'Game'
-
+linux:
+    target: "AppImage"
+    maintainer: "corche, peunsu"
+    vendor: "corche, peunsu"
+    synopsis: "Runscord Minecraft Launcher"
+    description: "마인크래프트 립버전 1.20.1다운 마인크래프트 립버전 1.20.1다운 있을 것 같았다. 그건 실로 벅찬 감격.."
+    category: "Game"
 
 directories:
-  buildResources: 'build'
-  output: 'dist'
+    buildResources: "build"
+    output: "dist"
