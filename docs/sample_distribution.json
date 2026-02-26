@@ -1,26 +1,26 @@
 {
-	"version": "1.11.6",
+	"version": "1.12.0",
 	"discord": {
-		"clientId": "1094798205788631040",
+		"clientId": "1476469988482355240",
 		"smallImageText": "",
 		"smallImageKey": ""
 	},
 	"servers": [
 		{
 			"id": "20260206_1.20.1",
-			"name": "룬스코드 젠슨황 모드 서버 시즌2",
-			"description": "MRS 2026-2 (MC 1.20.1 / Forge 47.4.0)",
+			"name": "룬스코드 젠슨황 모드 서버 시즌 2",
+			"description": "RSC-Season 2 (MC 1.20.1 / Fabric 0.18.4)",
 			"icon": "https://images-ext-1.discordapp.net/external/glvCTrSzrvWFHxROTCmxH8fh6HBNJXL4KL6SgZcH-Y0/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/1470564770783564103/0a717c683d16bad97ba9ae1877fb58dd.png?format=webp&quality=lossless",
 			"version": "1.0.0",
 			"address": "51.79.218.227:20128",
 			"minecraftVersion": "1.20.1",
 			"discord": {
-				"shortId": "Runscord",
+				"shortId": "룬스코드 젠슨황 모드 서버 시즌 2",
 				"largeImageText": "",
 				"largeImageKey": ""
 			},
 			"mainServer": true,
-			"autoconnect": false,
+			"autoconnect": true,
 			"modules": [
 				{
 					"id": "net.fabricmc:fabric-loader:0.18.4",
