@@ -2,7 +2,7 @@ appId: "rsclauncher"
 productName: "RSC Launcher"
 artifactName: "RSC-Launcher-setup-${version}.${ext}"
 
-copyright: "Copyright © 2018-2026 Daniel Scalzi, Copyright © 2026 corche Dummy17234"
+copyright: "Copyright © 2018-2026 Daniel Scalzi, Copyright © 2026 corche"
 
 asar: true
 compression: "maximum"
@@ -39,8 +39,8 @@ mac:
 # Linux Configuration
 linux:
     target: "AppImage"
-    maintainer: "corche, Dummy17234, Daniel Scalzi"
-    vendor: "corche, Dummy17234, Daniel Scalzi"
+    maintainer: "corche, Daniel Scalzi"
+    vendor: "corche, Daniel Scalzi"
     synopsis: "Runscord Minecraft Launcher"
     description: "마인크래프트 립버전 1.20.1다운 마인크래프트 립버전 1.20.1다운 있을 것 같았다. 그건 실로 벅찬 감격.."
     category: "Game"
