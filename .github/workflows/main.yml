@@ -1,59 +1,79 @@
-name: Electron 을 통한 웹앱 빌드(mac/windows - tag기반)
+name: Build & Release (manual)
 
 on:
-    push:
-        tags:
-            - "v*.*.*"
+    workflow_dispatch:
+        inputs:
+            tag:
+                description: "Release tag (e.g., v1.2.3). Must already exist or will be created as an annotated tag locally first."
+                required: true
+                default: "v0.0.0"
+            prerelease:
+                description: "Mark as prerelease"
+                required: false
+                type: boolean
+                default: false
 
 permissions:
     contents: write
 
 jobs:
     build:
-        if: startsWith(github.ref, 'refs/tags/v')
         name: Build (${{ matrix.os }})
         runs-on: ${{ matrix.os }}
         strategy:
             fail-fast: false
             matrix:
-                os: [windows-latest, macos-latest]
+                os: [macos-latest, ubuntu-latest, windows-latest]
 
         steps:
-            - uses: actions/checkout@v4
+            - name: Check out Git repository
+              uses: actions/checkout@v4
 
-            - uses: actions/setup-node@v4
+            - name: Set up Node
+              uses: actions/setup-node@v4
               with:
                   node-version: "20"
                   cache: "npm"
 
-            - run: npm ci
-            - run: npm run build
+            - name: Set up Python
+              uses: actions/setup-python@v5
+              with:
+                  python-version: "3.x"
 
-            - name: Electron build (no publish)
-              run: npx electron-builder --publish=never
+            - name: Install Dependencies
+              run: npm ci
+
+            # package.json에 dist 스크립트가 electron-builder 실행으로 잡혀있다는 전제
+            - name: Build (electron-builder)
               env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: npm run dist
 
-            - uses: actions/upload-artifact@v4
+            - name: Upload dist artifacts
+              uses: actions/upload-artifact@v4
               with:
                   name: dist-${{ matrix.os }}
-                  path: dist/**
+                  path: |
+                      dist/**
                   if-no-files-found: error
 
     release:
-        if: startsWith(github.ref, 'refs/tags/v')
+        name: Create GitHub Release
         needs: build
         runs-on: ubuntu-latest
 
         steps:
-            - uses: actions/download-artifact@v4
+            - name: Download all artifacts
+              uses: actions/download-artifact@v4
               with:
                   path: artifacts
 
-            - uses: softprops/action-gh-release@v2
+            - name: Create Release
+              uses: softprops/action-gh-release@v2
               with:
-                  tag_name: ${{ github.ref_name }}
-                  name: ${{ github.ref_name }}
+                  tag_name: ${{ inputs.tag }}
+                  name: ${{ inputs.tag }}
+                  prerelease: ${{ inputs.prerelease }}
                   generate_release_notes: true
                   files: |
                       artifacts/**/**/*.exe
