@@ -4,7 +4,7 @@
 
 <h3 align="center"><a href="https://github.com/dscalzi/HeliosLauncher">Forked from Helios Launcher</a></h3>
 
-<p align="center"><a href="https://github.com/peunsu/MRSLauncher/actions"><img src="https://img.shields.io/github/actions/workflow/status/peunsu/MRSLauncher/build.yml?branch=master&style=for-the-badge" alt="gh actions"></a> <a href="https://github.com/peunsu/MRSLauncher/releases"><img src="https://img.shields.io/github/downloads/peunsu/MRSLauncher/total.svg?style=for-the-badge" alt="downloads"></a>
+<p align="center"><a href="https://github.com/corche/RSCLauncher/actions"><img src="https://img.shields.io/github/actions/workflow/status/corche/RSCLauncher/build.yml?branch=master&style=for-the-badge" alt="gh actions"></a> <a href="https://github.com/corche/RSCLauncher/releases"><img src="https://img.shields.io/github/downloads/corche/RSCLauncher/total.svg?style=for-the-badge" alt="downloads"></a>
 
 <p align="center">Java, Forge, 모드 설치 걱정 없이 서버에 접속하세요. RSC 런처 하나로 준비 끝!</p>
 
